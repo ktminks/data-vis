@@ -1,0 +1,313 @@
+{
+  "Region": [
+    {
+      "regionID": "REG001",
+      "regionName": "Europe"
+    },
+    {
+      "regionID": "REG002",
+      "regionName": "Asia"
+    },
+    {
+      "regionID": "REG003",
+      "regionName": "Africa"
+    }
+  ],
+  "Country": [
+    {
+      "countryID": "C001",
+      "regionID": "REG001",
+      "countryName": "Germany",
+      "currencyUnit": "Euro"
+    },
+    {
+      "countryID": "C002",
+      "regionID": "REG001",
+      "countryName": "France",
+      "currencyUnit": "Euro"
+    },
+    {
+      "countryID": "C003",
+      "regionID": "REG002",
+      "countryName": "China",
+      "currencyUnit": "Renminbi"
+    },
+    {
+      "countryID": "C004",
+      "regionID": "REG002",
+      "countryName": "India",
+      "currencyUnit": "Indian Rupee"
+    },
+    {
+      "countryID": "C005",
+      "regionID": "REG003",
+      "countryName": "Nigeria",
+      "currencyUnit": "Naira"
+    }
+  ],
+  "DevelopmentIndicator": [
+    {
+      "indicatorID": "IND001",
+      "countryID": "C001",
+      "year": 2015,
+      "indicatorName": "GDP per capita",
+      "topic": "Economic Development",
+      "unitsOfMeasure": "USD"
+    },
+    {
+      "indicatorID": "IND002",
+      "countryID": "C001",
+      "year": 2015,
+      "indicatorName": "Literacy rate",
+      "topic": "Education",
+      "unitsOfMeasure": "%"
+    },
+    {
+      "indicatorID": "IND003",
+      "countryID": "C003",
+      "year": 2015,
+      "indicatorName": "Life expectancy",
+      "topic": "Health",
+      "unitsOfMeasure": "years"
+    },
+    {
+      "indicatorID": "IND004",
+      "countryID": "C005",
+      "year": 2015,
+      "indicatorName": "Access to electricity",
+      "topic": "Infrastructure",
+      "unitsOfMeasure": "%"
+    },
+    {
+      "indicatorID": "IND001",
+      "countryID": "C001",
+      "year": 2016,
+      "indicatorName": "GDP per capita",
+      "topic": "Economic Development",
+      "unitsOfMeasure": "USD"
+    },
+    {
+      "indicatorID": "IND002",
+      "countryID": "C001",
+      "year": 2016,
+      "indicatorName": "Literacy rate",
+      "topic": "Education",
+      "unitsOfMeasure": "%"
+    },
+    {
+      "indicatorID": "IND003",
+      "countryID": "C003",
+      "year": 2016,
+      "indicatorName": "Life expectancy",
+      "topic": "Health",
+      "unitsOfMeasure": "years"
+    },
+    {
+      "indicatorID": "IND004",
+      "countryID": "C005",
+      "year": 2016,
+      "indicatorName": "Access to electricity",
+      "topic": "Infrastructure",
+      "unitsOfMeasure": "%"
+    },
+    {
+      "indicatorID": "IND001",
+      "countryID": "C001",
+      "year": 2017,
+      "indicatorName": "GDP per capita",
+      "topic": "Economic Development",
+      "unitsOfMeasure": "USD"
+    },
+    {
+      "indicatorID": "IND002",
+      "countryID": "C001",
+      "year": 2017,
+      "indicatorName": "Literacy rate",
+      "topic": "Education",
+      "unitsOfMeasure": "%"
+    },
+    {
+      "indicatorID": "IND003",
+      "countryID": "C003",
+      "year": 2017,
+      "indicatorName": "Life expectancy",
+      "topic": "Health",
+      "unitsOfMeasure": "years"
+    },
+    {
+      "indicatorID": "IND004",
+      "countryID": "C005",
+      "year": 2017,
+      "indicatorName": "Access to electricity",
+      "topic": "Infrastructure",
+      "unitsOfMeasure": "%"
+    }
+  ],
+  "PovertyAndIncome": [
+    {
+      "indicatorID": "PAI001",
+      "countryID": "C001",
+      "year": 2015,
+      "mean": 21000,
+      "gdp": 3.9,
+      "giniIndex": 29.1,
+      "median": 19800,
+      "povertyGap": 5.5,
+      "headCount": 1.5
+    },
+    {
+      "indicatorID": "PAI002",
+      "countryID": "C002",
+      "year": 2015,
+      "mean": 27000,
+      "gdp": 2.8,
+      "giniIndex": 28.7,
+      "median": 25500,
+      "povertyGap": 4.8,
+      "headCount": 1.2
+    },
+    {
+      "indicatorID": "PAI003",
+      "countryID": "C003",
+      "year": 2015,
+      "mean": 8300,
+      "gdp": 6.9,
+      "giniIndex": 42.1,
+      "median": 8100,
+      "povertyGap": 19.6,
+      "headCount": 8.9
+    },
+    {
+      "indicatorID": "PAI004",
+      "countryID": "C004",
+      "year": 2015,
+      "mean": 5600,
+      "gdp": 1.9,
+      "giniIndex": 35.2,
+      "median": 5200,
+      "povertyGap": 17.7,
+      "headCount": 7.5
+    },
+    {
+      "indicatorID": "PAI005",
+      "countryID": "C005",
+      "year": 2015,
+      "mean": 3300,
+      "gdp": 0.8,
+      "giniIndex": 46.8,
+      "median": 2900,
+      "povertyGap": 32.0,
+      "headCount": 14.2
+    },
+    {
+      "indicatorID": "PAI001",
+      "countryID": "C001",
+      "year": 2016,
+      "mean": 22000,
+      "gdp": 4.2,
+      "giniIndex": 28.9,
+      "median": 20500,
+      "povertyGap": 4.2,
+      "headCount": 1.2
+    },
+    {
+      "indicatorID": "PAI002",
+      "countryID": "C002",
+      "year": 2016,
+      "mean": 28000,
+      "gdp": 3.0,
+      "giniIndex": 29.0,
+      "median": 26000,
+      "povertyGap": 3.8,
+      "headCount": 1.0
+    },
+    {
+      "indicatorID": "PAI003",
+      "countryID": "C003",
+      "year": 2016,
+      "mean": 9400,
+      "gdp": 7.6,
+      "giniIndex": 41.2,
+      "median": 9000,
+      "povertyGap": 18.0,
+      "headCount": 8.5
+    },
+    {
+      "indicatorID": "PAI004",
+      "countryID": "C004",
+      "year": 2016,
+      "mean": 5800,
+      "gdp": 2.1,
+      "giniIndex": 34.5,
+      "median": 5400,
+      "povertyGap": 16.5,
+      "headCount": 7.0
+    },
+    {
+      "indicatorID": "PAI005",
+      "countryID": "C005",
+      "year": 2016,
+      "mean": 3500,
+      "gdp": 0.9,
+      "giniIndex": 45.5,
+      "median": 3100,
+      "povertyGap": 30.0,
+      "headCount": 13.5
+    },
+    {
+      "indicatorID": "PAI001",
+      "countryID": "C001",
+      "year": 2017,
+      "mean": 23000,
+      "gdp": 4.5,
+      "giniIndex": 28.7,
+      "median": 21200,
+      "povertyGap": 3.0,
+      "headCount": 0.9
+    },
+    {
+      "indicatorID": "PAI002",
+      "countryID": "C002",
+      "year": 2017,
+      "mean": 29000,
+      "gdp": 3.2,
+      "giniIndex": 29.3,
+      "median": 26500,
+      "povertyGap": 3.5,
+      "headCount": 0.8
+    },
+    {
+      "indicatorID": "PAI003",
+      "countryID": "C003",
+      "year": 2017,
+      "mean": 10500,
+      "gdp": 8.3,
+      "giniIndex": 40.3,
+      "median": 10100,
+      "povertyGap": 17.0,
+      "headCount": 7.5
+    },
+    {
+      "indicatorID": "PAI004",
+      "countryID": "C004",
+      "year": 2017,
+      "mean": 6100,
+      "gdp": 2.3,
+      "giniIndex": 33.8,
+      "median": 5700,
+      "povertyGap": 15.5,
+      "headCount": 6.5
+    },
+    {
+      "indicatorID": "PAI005",
+      "countryID": "C005",
+      "year": 2017,
+      "mean": 3700,
+      "gdp": 1.0,
+      "giniIndex": 44.2,
+      "median": 3200,
+      "povertyGap": 28.0,
+      "headCount": 12.5
+    }
+  ]
+}

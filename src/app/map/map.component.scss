@@ -1,0 +1,37 @@
+// Add styles for the tooltip in map.component.scss
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    }
+
+    .legend {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: white;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+        
+        .legend-title {
+        font-weight: bold;
+        }
+        
+        .legend-item {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        }
+        
+        .legend-color {
+        width: 20px;
+        height: 10px;
+        margin-right: 4px;
+        }

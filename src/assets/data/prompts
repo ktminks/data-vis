@@ -1,0 +1,53 @@
+You are an expert in developing professional frontend web applications using Angular, TypeScript, D3, and Material for visualization of complex SQL trend queries on large historical datasets. Generate the code for a simplified version of an application that displays one of several complex trend queries regarding global development indicators over time. Based on a toggle, each trend will as be displayed as either a line graph or a geographical map of the Earth. Based on another toggle, the data displayed will be grouped and displayed by region or by country. 
+
+Users can interact with each query by changing the time frame via a slider, and by swapping out data variables via a drop-down menu.
+
+Do not explain the code. Instead, write the code in a manner that is easy to read and understand, favoring modularity and dependency injection wherever possible. Give variables and functions names that are self-explanatory yet concise.
+
+---
+
+Transform the following collection of relation schemas into a collection of schemas for a mongoDB database (in JSON format). Simplify the result (if necessary) for use as a mock database for an MVP (minimum viable product) of a data visualization app. Keep the format similar to the schema of a relational SQL database, as this app will eventually be connected to an Oracle database.
+
+Region (regID: string, regionName: string) 
+Country (cntryID: string, regID: string, countryName: string, currencyUnit: string) 
+DevelopmentIndicator (indID: string, cntryID: string, year: integer, indicatorName: string, topic: string, unitsOfMeasure: string) 
+PovertyAndIncome (indID: string, cntryID: string, year: integer, mean: float, gdp: float, giniIndex: float, median: float, povertyGap: float, headCount: integer)
+
+---
+
+Generate mock data for the MVP (minimum viable product) of a data visualization app using the following schema:
+
+<schema>
+
+--- 
+
+You are an expert in developing professional frontend web applications for "data visualization" using Angular, TypeScript, D3, and Material. Generate some code to serve as a starting point for the development of the MVP (minimum viable product) of a data visualization application that focuses on trends in global development. Initially, a user sees a single complex trend query in the form of a line graph, which can be switched to display as a geographical map of the Earth via a toggle.
+
+Favor modularity and dependency injection wherever possible. Use a data service that retrieves both data and queries from a mock back-end. Assume this mock data is available; do not generate it.
+
+Do not explain the code. Instead, write the code in a manner that is easy to read and understand, adding comments where necessary to ensure clarity. Give variables and functions concise names that describe their purpose.
+
+First colloquial query:
+For each year since 1960, how many countries have reported a poverty rate much worse than the global average was that year?
+
+Database schema:
+<schema>
+
+---
+Based on a toggle, each trend will as be displayed as either a line graph or a geographical map of the Earth. Based on another toggle, the data displayed will be grouped and displayed by region or by country. 
+
+Users can interact with each query by changing the time frame via a slider, and by swapping out data variables via a drop-down menu.
+
+--- 
+
+You are an expert in back-end development for professional "data visualization" web applications using Python, Flask, and relational databases. Generate some code to serve as a starting point for the development of the MVP (minimum viable product) of a data visualization application that focuses on trends in global development. Initially, the back-end must run one query against a mock database in the form of mock data, available in a file called 'mock_simplified.json'. Assume this mock data is available; do not generate it. The result of this query must be provided to the front-end. In the future, this application will be connected to an Oracle database.
+
+Favor modularity and dependency injection wherever possible. Queries must be hard-coded in OracleSQL. I will provide one query and the schema for the database.
+
+Do not explain the code. Instead, write the code in a manner that is easy to read and understand, adding comments where necessary to ensure clarity. Give variables and functions concise names that describe their purpose.
+
+First colloquial query:
+For each year since 1960, how many countries have reported a poverty rate much worse than the global average was that year?
+
+Database schema:
+<schema>

@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'data-vis';
+  isGraphVisible = true;
+
+  constructor(private dataService: DataService) {}
+
+  toggleView() {
+    this.isGraphVisible = !this.isGraphVisible;
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "Region": {
+    "regionID": "string",
+    "regionName": "string"
+  },
+  "Country": {
+    "countryID": "string",
+    "regionID": "string",
+    "countryName": "string",
+    "currencyUnit": "string"
+  },
+  "DevelopmentIndicator": {
+    "indicatorID": "string",
+    "countryID": "string",
+    "year": "integer",
+    "indicatorName": "string",
+    "topic": "string",
+    "unitsOfMeasure": "string"
+  },
+  "PovertyAndIncome": {
+    "indicatorID": "string",
+    "countryID": "string",
+    "year": "integer",
+    "mean": "float",
+    "gdp": "float",
+    "giniIndex": "float",
+    "median": "float",
+    "povertyGap": "float",
+    "headCount": "integer"
+  }
+}
