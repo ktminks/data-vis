@@ -1,7 +1,7 @@
-// d3-geo-map.ts
 import { ElementRef } from '@angular/core';
 import * as d3 from 'd3';
-import { feature } from 'topojson-client';
+import { GeoJSON, FeatureCollection, Geometry } from 'geojson';
+const path = 'https://datahub.io/core/geo-countries/datapackage.json'
 
 export class D3GeoMap {
   private svg = this.container.nativeElement;
@@ -41,22 +41,20 @@ export class D3GeoMap {
   }
 
   private render(data: { count: number; year: number }[]): void {
-    d3.json('https://unpkg.com/world-atlas@2.0.1/world/110m.json').then(
-      (topology: any) => {
-        const countries = feature(
-          topology,
-          topology.objects.countries
-        ).features;
-
-        this.svg
-          .selectAll('path')
-          .data(countries)
-          .enter()
-          .append('path')
-          .attr('d', this.path)
-          .attr('fill', 'lightgray')
-          .attr('stroke', 'black');
+    d3.json<FeatureCollection<Geometry>>(path).then((geojson: FeatureCollection<Geometry> | undefined) => {
+      if (!geojson) {
+        console.error('Failed to fetch map data');
+        return;
       }
-    );
+
+      this.svg
+        .selectAll('path')
+        .data(geojson.features)
+        .enter()
+        .append('path')
+        .attr('d', this.path)
+        .attr('fill', 'lightgray')
+        .attr('stroke', 'black');
+    });
   }
 }

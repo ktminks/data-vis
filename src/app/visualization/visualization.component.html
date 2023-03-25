@@ -1,0 +1,5 @@
+<!-- visualization.component.html -->
+<button (click)="displayMode = 'line'">Line Graph</button>
+<button (click)="displayMode = 'map'">Map</button>
+<app-graph *ngIf="displayMode === 'line'"></app-graph>
+<app-map *ngIf="displayMode === 'map'"></app-map>
