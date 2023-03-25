@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./visualization.component.scss']
 })
 export class VisualizationComponent implements OnInit {
-  displayMode: 'line' | 'map' = 'line';
-
   constructor() { }
 
   ngOnInit(): void {

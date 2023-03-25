@@ -1,5 +1,11 @@
 <!-- visualization.component.html -->
-<button (click)="displayMode = 'line'">Line Graph</button>
-<button (click)="displayMode = 'map'">Map</button>
-<app-graph *ngIf="displayMode === 'line'"></app-graph>
-<app-map *ngIf="displayMode === 'map'"></app-map>
+<mat-button-toggle-group #group="matButtonToggleGroup" value="graph">
+    <mat-button-toggle value="graph" aria-label="graph mode">
+      <mat-icon>multiline_chart</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="map" aria-label="map mode">
+      <mat-icon>public</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+<app-graph *ngIf="group.value === 'graph'"></app-graph>
+<app-map *ngIf="group.value === 'map'"></app-map>

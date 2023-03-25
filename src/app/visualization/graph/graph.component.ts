@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../../services/data.service';
 import { D3LineGraph } from './d3-line-graph';
 
 @Component({

@@ -14,4 +14,9 @@ export class DataService {
   getPovertyData(): Observable<{ count: number; year: number }[]> {
     return this.http.get<{ count: number; year: number }[]>(`${this.baseUrl}/poverty`);
   }
+
+  getGeoJSONData(): Observable<any> {
+    const dataurl = "https://datahub.io/core/geo-countries/datapackage.json"
+    return this.http.get<any>(`${dataurl}`);
+  }
 }

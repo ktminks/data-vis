@@ -1,6 +1,6 @@
 // map.component.ts
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../../services/data.service';
 import { D3GeoMap } from './d3-geo-map';
 
 @Component({
@@ -21,8 +21,11 @@ export class MapComponent implements OnInit {
   }
 
   private fetchData(): void {
-    this.dataService.getPovertyData().subscribe((data: { count: number, year: number }[]) => {
-      this.geoMap.setData(data);
+    // this.dataService.getPovertyData().subscribe((data: { count: number, year: number }[]) => {
+    //   this.geoMap.setData(data);
+    // });
+    this.dataService.getGeoJSONData().subscribe((data: any) => {
+      this.geoMap.setGeoJSONData(data);
     });
   }
 }
