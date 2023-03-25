@@ -2,5 +2,8 @@
   Global Development Trends
   <button mat-button (click)="toggleView()">Toggle View</button>
 </mat-toolbar>
-<app-graph *ngIf="isGraphVisible"></app-graph>
-<app-map *ngIf="!isGraphVisible"></app-map>
+<div class="container">
+    <div id="display">
+      <app-graph></app-graph>
+    </div>
+  </div>

@@ -7,14 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private readonly baseUrl = 'http://localhost:4201/api';
+  private baseUrl = 'http://localhost:4201/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getTopology(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/topology`);
-  }
-  getPovertyData(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/poverty`);
+  getPovertyData(): Observable<{ count: number; year: number }[]> {
+    return this.http.get<{ count: number; year: number }[]>(`${this.baseUrl}/poverty`);
   }
 }

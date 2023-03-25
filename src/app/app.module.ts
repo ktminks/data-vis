@@ -8,13 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { GraphComponent } from './graph/graph.component';
-import { MapComponent } from './map/map.component';
 
 @NgModule({
 declarations: [
 AppComponent,
-GraphComponent,
-MapComponent
+GraphComponent
 ],
 imports: [
 BrowserModule,

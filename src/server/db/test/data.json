@@ -83,6 +83,17 @@
       "povertyGap": 5.5,
       "headCount": 1.5
     },
+        {
+      "indicatorID": "PAI001",
+      "countryID": "C001",
+      "year": 2014,
+      "mean": 20000,
+      "gdp": 3.9,
+      "giniIndex": 29.1,
+      "median": 19800,
+      "povertyGap": 5.5,
+      "headCount": 1.5
+    },
     {
       "indicatorID": "PAI002",
       "countryID": "C002",
@@ -98,6 +109,18 @@
       "indicatorID": "PAI003",
       "countryID": "C003",
       "year": 2015,
+      "mean": 8300,
+      "gdp": 6.9,
+      "giniIndex": 42.1,
+      "median": 8100,
+      "povertyGap": 19.6,
+      "headCount": 8.9
+    },
+    
+    {
+      "indicatorID": "PAI003",
+      "countryID": "C003",
+      "year": 2014,
       "mean": 8300,
       "gdp": 6.9,
       "giniIndex": 42.1,
