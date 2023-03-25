@@ -1,22 +1,20 @@
+// data.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class DataService {
-  private mockApiUrl = 'http://localhost:4201/api';
+  private readonly baseUrl = 'http://localhost:4201/api';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getTrendsData(): Observable<any> {
-    return this.getPovertyData();
-  }
-  getMapData(): Observable<any> {
-    return this.getPovertyData();
+  getTopology(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/topology`);
   }
   getPovertyData(): Observable<any> {
-    return this.http.get<any>(`${this.mockApiUrl}/poverty`);
+    return this.http.get<any>(`${this.baseUrl}/poverty`);
   }
 }
