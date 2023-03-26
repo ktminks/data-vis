@@ -1,12 +1,14 @@
 import { ElementRef } from '@angular/core';
 import * as d3 from 'd3';
 import { FeatureCollection } from 'geojson';
+import { GeoJsonData, Feature } from '../../services/data.service';
+import { geoPath, geoNaturalEarth1 } from 'd3-geo';
 
 export class D3GeoMap {
   private svg = this.container.nativeElement;
   private projection!: d3.GeoProjection;
-  private path!: d3.GeoPath<any, d3.GeoPermissibleObjects>;
-  private geoJSONData!: FeatureCollection;
+  private path!: d3.GeoPath;
+  // private geoJSONData!: FeatureCollection;
   private width = this.container.nativeElement.clientWidth;
   private height = this.container.nativeElement.clientHeight;
 
@@ -24,16 +26,14 @@ export class D3GeoMap {
   }
 
   private initProjection(): void {
-    this.projection = d3.geoEquirectangular()
-    .scale(this.width / (2 * Math.PI))
-    .translate([this.width / 2, this.height / 2]);
+    this.projection = d3.geoNaturalEarth1()
     this.path = d3.geoPath().projection(this.projection);
   }
 
-  private render(data: { count: number; year: number }[]): void {
-      // Render the map using the GeoJSON data.
+  private render(geoData: GeoJsonData): void {
+      // Render the map using the GeoJSON data and statistical data
       this.svg.selectAll('path')
-        .data(this.geoJSONData.features)
+        .data(geoData.features)
         .enter()
         .append('path')
         .attr('d', this.path)
@@ -41,12 +41,11 @@ export class D3GeoMap {
         .attr('stroke', '#000');
   }
 
-  // public setData(data: { count: number; year: number }[]): void {
-  //   // this.geoJSONData = data;
-  //   // this.render(data);
-  // }
+  public setData(data: { count: number; year: number }[]): void {
+    // this.geoJSONData = data;
+    // this.render(data);
+  }
   public setGeoJSONData(data: any): void {
-    this.geoJSONData = data;
     this.render(data);
   }
 

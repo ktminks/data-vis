@@ -10,7 +10,9 @@ import { D3GeoMap } from './d3-geo-map';
 })
 export class MapComponent implements OnInit {
   @ViewChild('mapContainer', { static: true }) mapContainer!: ElementRef;
-
+  private width: number = 800;
+  private height: number = 400;
+  
   private geoMap!: D3GeoMap;
 
   constructor(private dataService: DataService) {}
@@ -21,10 +23,10 @@ export class MapComponent implements OnInit {
   }
 
   private fetchData(): void {
-    // this.dataService.getPovertyData().subscribe((data: { count: number, year: number }[]) => {
-    //   this.geoMap.setData(data);
-    // });
-    this.dataService.getGeoJSONData().subscribe((data: any) => {
+    this.dataService.getPovertyData("map").subscribe((data: { count: number, year: number }[]) => {
+      this.geoMap.setData(data);
+    });
+    this.dataService.getGeoJsonData().subscribe((data: any) => {
       this.geoMap.setGeoJSONData(data);
     });
   }

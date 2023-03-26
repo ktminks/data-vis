@@ -20,7 +20,7 @@ export class GraphComponent implements OnInit {
   }
 
   private fetchData(): void {
-    this.dataService.getPovertyData().subscribe((data: { count: number, year: number }[]) => {
+    this.dataService.getPovertyData("graph").subscribe((data: { count: number, year: number }[]) => {
       this.lineGraph.setData(data);
     });
   }

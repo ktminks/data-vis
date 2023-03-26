@@ -6,7 +6,7 @@ class DataService:
     def __init__(self, db_manager):
         self.db_manager = db_manager
 
-    def fetch_data(self, query):
+    def run_query(self, query):
         conn = self.db_manager.connect()
         cursor = conn.cursor()
 
@@ -18,3 +18,16 @@ class DataService:
         conn.close()
 
         return data
+
+    def fetch_map_data(self, query):
+        conn = self.db_manager.connect()
+        cursor = conn.cursor()
+
+        cursor.execute(query)
+        result = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return result
+    
